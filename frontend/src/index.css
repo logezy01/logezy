@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #F8FAFC;
+    color: #0F172A;
+  }
+
+  h1, h2 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-[#1A6B3C] text-white px-5 py-3 rounded-xl font-bold text-sm
+           hover:bg-[#0F4A28] transition-all duration-200 cursor-pointer;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-[#1A6B3C] border-2 border-[#1A6B3C] px-5 py-3
+           rounded-xl font-bold text-sm hover:bg-[#E8F5EE] transition-all duration-200 cursor-pointer;
+  }
+
+  .btn-ghost {
+    @apply text-[#1A6B3C] px-5 py-3 rounded-xl font-bold text-sm
+           hover:bg-[#E8F5EE] transition-all duration-200 cursor-pointer;
+  }
+
+  .input-field {
+    @apply w-full bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl px-4 py-3
+           text-sm text-[#0F172A] placeholder-[#94A3B8]
+           focus:outline-none focus:border-[#1A6B3C] focus:ring-2
+           focus:ring-[#1A6B3C]/10 transition-all duration-200;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl border border-[#E2E8F0];
+  }
+}
